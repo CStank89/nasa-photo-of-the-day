@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import axios from 'axios'
 
 
-function Picture(){
-    const[picture, setPicture] = useState()
+function Date(){
+    const[date, setDate] = useState()
 
     return(
         <div>
-            <img></img>
+            <h4>{date}</h4>
         </div>
     )
 }
-export default Picture;
+export default Date;
