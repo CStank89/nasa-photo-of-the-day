@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import Axios from 'axios'
 
 
 function Date(){
     const[date, setDate] = useState()
 
+    function setDate()
+
     return(
         <div>
+        <Date />    
             <h4>{date}</h4>
         </div>
     )
