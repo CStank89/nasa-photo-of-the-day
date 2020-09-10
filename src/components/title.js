@@ -5,31 +5,46 @@ import {API_KEY, BASE_URL} from '../Constants/index'
 
 import styled, { keyframes } from 'styled-components'
 
-
-const kf = keyframes`
-  100%{
-    opacity: 1;
-  }
-`
-
-
-const StyledTitle = styled.div`
-  opacity: 0;
-  animation: ${kf} 3s forwards;
-  color: ${pr => pr.theme.tertiaryColor};
-  padding: ${pr => pr.theme.paddingSmall};
-  display: flex;
-  justify-content: center;
-  background-color: ${pr => pr.theme.secondaryColor};
-
-
-  @media ${pr => pr.theme.mobileBreakpoint} {
-    width: initial;
-  }
+import { bounce } from 'react-animations';
 
 
 
-`
+ 
+const bounceAnimation = keyframes`${bounce}`;
+
+const BouncyDiv = styled.div`
+animation: 1s ${bounceAnimation};
+
+`;
+
+
+
+
+// const kf = keyframes`
+//   100%{
+//     opacity: 1;
+//   }
+// `
+
+
+
+// const StyledTitle = styled.div`
+//   opacity: 0;
+//   animation: ${kf} 3s forwards;
+//   color: ${pr => pr.theme.tertiaryColor};
+//   padding: ${pr => pr.theme.paddingSmall};
+//   display: flex;
+//   justify-content: center;
+//   background-color: ${pr => pr.theme.secondaryColor};
+
+
+//   @media ${pr => pr.theme.mobileBreakpoint} {
+//     width: initial;
+//   }
+
+
+
+// `
   
 
 function Title(){
@@ -52,11 +67,11 @@ function Title(){
    
     return (
       
-        <StyledTitle className='container-title'>
+        <BouncyDiv className='container-title'>
         
           <h1>{title}</h1>
       
-        </StyledTitle>
+        </BouncyDiv>
       )
 }
 

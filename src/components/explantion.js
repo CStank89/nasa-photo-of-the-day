@@ -6,18 +6,20 @@ import {API_KEY, BASE_URL} from '../Constants/index'
 import styled, { keyframes } from 'styled-components'
 
 
+
+
 const kf = keyframes`
   100%{
     opacity: 1;
   }
 `
 
+
 const StyledExplanation = styled.div`
   opacity: 0;
   animation: ${kf} 5s forwards;
   color: ${pr => pr.theme.primaryColor};
   padding: ${pr => pr.theme.paddingSmall};
-  width:  60%;
   display: flex;
   text-align: center;
   justify-content: center;
