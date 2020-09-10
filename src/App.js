@@ -5,7 +5,10 @@ import Title from './components/title'
 import Explantion from './components/explantion'
 import Date from './components/date'
 
-// import styled, { keyframes } from './theme'
+
+
+import { keyframes } from './theme'
+import styled from 'styled-components'
 
 
 // https://api.nasa.gov/planetary/apod?api_key=bTdwPCc2bbeitjH0BR1r1x2KLTbAyj15LK2WYfhq 
@@ -15,17 +18,16 @@ import {API_KEY, BASE_URL} from './Constants/index'
 
 
 
-// const StyledPicture = styled.div`
-//     border-bottom: 2px solid white;
-//     color: ${pr => pr.theme.tertiaryColor};
-//     padding: ${pr => pr.theme.paddingSmall};
-//     width:  60%;
-//     display: flex;
-//     justify-content: center;
-//     background-color: ${pr => pr.theme.secondaryColor};
+const StyledPicture = styled.div`
+    color: ${pr => pr.theme.tertiaryColor};
+    padding: ${pr => pr.theme.paddingSmall};
+    background-color: ${pr => pr.theme.secondaryColor};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 
-
-// `
+`
 
 
 
@@ -56,13 +58,13 @@ export default function App() {
 
   
   return (
-    <div className='container'>
+    <StyledPicture className='container'>
       <h1>NASA'S DAILY PICTURE</h1>
       <Date />
       <Title />
-      <img src={picture}></img>
+      <img src={picture} alt='from space'></img>
       <Explantion />
      
-    </div>
+    </StyledPicture>
   )
 }

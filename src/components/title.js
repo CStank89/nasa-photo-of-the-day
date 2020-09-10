@@ -51,9 +51,11 @@ function Title(){
       }, [])
    
     return (
+      
         <StyledTitle className='container-title'>
         
           <h1>{title}</h1>
+      
         </StyledTitle>
       )
 }

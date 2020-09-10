@@ -17,7 +17,7 @@ const StyledDate = styled.div`
   padding: ${pr => pr.theme.paddingSmall};
   display: flex;
   justify-content: center;
-  background-color: ${pr => pr.theme.secondaryColor}
+  background-color: ${pr => pr.theme.secondaryColor};
 
 `
 
@@ -45,6 +45,7 @@ function Date(){
       
       return (
         <StyledDate className='container-title'>
+                <span class="material-icons">public</span>
           <h2>{date}</h2>
         </StyledDate>
       )
