@@ -3,6 +3,35 @@ import axios from 'axios'
 
 import {API_KEY, BASE_URL} from '../Constants/index'
 
+import styled, { keyframes } from 'styled-components'
+
+
+const kf = keyframes`
+  100%{
+    opacity: 1;
+  }
+`
+
+
+const StyledTitle = styled.div`
+  opacity: 0;
+  animation: ${kf} 3s forwards;
+  color: ${pr => pr.theme.tertiaryColor};
+  padding: ${pr => pr.theme.paddingSmall};
+  display: flex;
+  justify-content: center;
+  background-color: ${pr => pr.theme.secondaryColor};
+
+
+  @media ${pr => pr.theme.mobileBreakpoint} {
+    width: initial;
+  }
+
+
+
+`
+  
+
 function Title(){
     const [ title, setTitle] = useState()
   
@@ -22,12 +51,13 @@ function Title(){
       }, [])
    
     return (
-        <div className='container-title'>
+        <StyledTitle className='container-title'>
+        
           <h1>{title}</h1>
-        </div>
+        </StyledTitle>
       )
 }
-  
+
 
 
 export default Title;
